@@ -3,7 +3,10 @@
 :root{
     --margin-left: 5vw;
     --introduction-fontsize: 1.8rem;
+    --label-fontsize: 0.8rem;
+    --input-fontsize: 1.1rem;
     --form-grid-gap: 30px;
+    --input-border: #dddddd;
 }
 
 body {
@@ -68,6 +71,7 @@ body {
 }
 
 #myform {
+    white-space: nowrap;
     padding: var(--form-grid-gap) var(--margin-left);
     background-color: antiquewhite;
 }
@@ -75,6 +79,24 @@ body {
 #myform > p {
     font-size: var(--introduction-fontsize);
     padding-bottom: var(--form-grid-gap);
+}
+
+#myform > ul > li {
+    display: flex;
+    flex-direction: column;
+}
+#myform > ul > li > .hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+
+#myform label{
+    font-size: var(--label-fontsize);
+}
+
+#myform label.hobby-text, #myform label.gender-text{
+    font-size: var(--input-fontsize);
 }
 
 .grid-container {
@@ -87,4 +109,55 @@ body {
 .about-me-area {
     grid-column-start: 1;
     grid-column-end: 3;
+}
+
+#myform input, #myform textarea {
+    padding: 0.3em 0.5em;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: var(--input-fontsize);
+    /* max-width: 200px; */
+}
+
+#myform select{
+    padding: 0.2em 0.5em;
+    width: 120px;
+    border: 1px solid var(--input-border);
+    font-size: var(--input-fontsize);
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+#myform textarea {
+    padding-bottom: 2.5rem;
+}
+
+#myform  .requirement{
+    padding: 0;
+    color: #999;
+    max-height: 0;
+    transition: 0.28s;
+    overflow: hidden;
+    color: red;
+    font-style: italic;
+}
+
+#myform  input[type="email"]:invalid:not(:focus):not(:placeholder-shown) + .requirement{
+    max-height: 200px;
+    padding: 0.5rem 0 1rem 0;
+}
+
+#myform  input[type="tel"]:invalid:not(:focus):not(:placeholder-shown) + .requirement{
+    max-height: 200px;
+    padding: 0.5rem 0 1rem 0;
+}
+
+#myform input[type="email"]:invalid:not(:focus):not(:placeholder-shown){
+    background: pink;
+}
+
+#myform input[type="tel"]:invalid:not(:focus):not(:placeholder-shown){
+    background: pink;
 }

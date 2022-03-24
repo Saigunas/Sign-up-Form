@@ -35,18 +35,22 @@
                     <li>
                         <label for="email">*EMAIL</label>
                         <input type="email" id="email" name="email" required placeholder="user@mydomain.com">
+                        <p class="requirement">Must be a valid email address</p>
                     </li>
                     <li>
                         <label for="phone">*PHONE NUMBER</label>
-                    <input type="tel" id="phone" name="phone" required pattern="\+370[0-9]{7}" title="+370XXXXXXXX" maxlength="11" placeholder="+370XXXXXXXX">
+                        <input type="tel" id="phone" name="phone" required pattern="\+370[0-9]{7}" title="+370XXXXXXXX" maxlength="11" placeholder="+370XXXXXXXX">
+                        <p class="requirement">example: +370XXXXXXXX</p>
                     </li>
                     <li>
                         <label for="pass">*PASSWORD</label>
                         <input type="password" id="pass" required name="pass">
+                        <p class="requirement">Passwords must match</p>
                     </li>
                     <li>
                         <label for="pass-confirm">*CONFIRM PASSWORD</label>
                         <input type="password" id="pass-confirm" required name="pass-confirm">
+                        <p class="requirement">Passwords must match</p>
                     </li>
                     <li>
                         <label for="birth-date">BIRTH DATE</label>
@@ -73,29 +77,40 @@
                     </li>
                     <li>
                         <label for="">*GENDER</label>
-                        <label class='gender-text' for="gender-m">Male</label>
-                        <input type="radio" id="gender-m" value="male" name="gender" required>
-                        <label class='gender-text' for="gender-f">Female</label>
-                        <input type="radio" id="gender-f" value="female" name="gender">
-                        <label class='gender-text' for="gender-o">Other</label>
-                        <input type="radio" id="gender-o" value="male" name="gender">
+                        <div class="genders">
+                            <label class='gender-text' for="gender-m">Male</label>
+                            <input type="radio" id="gender-m" value="male" name="gender" required>
+                            <label class='gender-text' for="gender-f">Female</label>
+                            <input type="radio" id="gender-f" value="female" name="gender">
+                            <label class='gender-text' for="gender-o">Other</label>
+                            <input type="radio" id="gender-o" value="male" name="gender">
+                        </div>
                     </li>
                     <li>
                         <label for="">HOBBIES</label>
-                        <label class='hobby-text' for="hobby1">Sports</label>
-                        <input type="checkbox" id="hobby1" value="cycling" name="hobby1">
-                        <label class='hobby-text' for="hobby2">Music</label>
-                        <input type="checkbox" id="hobby2" value="music" name="hobby2">
-                        <label class='hobby-text' for="hobby3">Video games</label>
-                        <input type="checkbox" id="hobby3" value="video-games" name="hobby3">
-                        <label class='hobby-text' for="hobby4">movies</label>
-                        <input type="checkbox" id="hobby4" value="movies" name="hobby4">
+                        <div class="hobbies">
+                            <div class="hobby">
+                                <label class='hobby-text' for="hobby1">Sports</label>
+                                <input type="checkbox" id="hobby1" value="cycling" name="hobby1">
+                            </div>
+                            <div class="hobby">
+                                <label class='hobby-text' for="hobby2">Music</label>
+                                <input type="checkbox" id="hobby2" value="music" name="hobby2">
+                            </div>
+                            <div class="hobby">
+                                <label class='hobby-text' for="hobby3">Video games</label>
+                                <input type="checkbox" id="hobby3" value="video-games" name="hobby3">
+                            </div>
+                            <div class="hobby">
+                                <label class='hobby-text' for="hobby4">movies</label>
+                                <input type="checkbox" id="hobby4" value="movies" name="hobby4">
+                            </div>
+                        </div>
                     </li>
                     <li class="about-me-area">
                         <label for="about-me">ABOUT ME</label>
                         <textarea id="about-me" name="about-me" maxlength="300" autocomplete=off 
-                            placeholder="I like fire trucks and monster trucks
-                             Walter"></textarea>       
+                            placeholder="I like fire trucks and monster trucks"></textarea>       
                     </li>
                 </ul>
             </form>

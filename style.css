@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+:root{
+    --margin-left: 5vw;
+    --introduction-fontsize: 1.8rem;
+    --form-grid-gap: 30px;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  }
+    font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
 
 .page-wrapper {
     width: 100vw;
@@ -12,6 +20,7 @@ body {
     position: relative;
     display: flex;
     width: 40vw;
+    min-width: 40vw;
     height: auto;
 }
 
@@ -40,4 +49,42 @@ body {
 
 .theme-image {
     height: 7rem;
+}
+
+.content-box > p, .sign-up-bttn, .haveAccount {
+    margin-left: var(--margin-left);
+    margin-top: 3vh;
+}
+
+.content-box > .introduction {
+    font-size: var(--introduction-fontsize);
+    margin-top: 15vh;
+    margin-right: calc(var(--margin-left)*2.5);
+}
+
+.introduction2 {
+    font-size: var(--introduction-fontsize);
+    margin-bottom: 5vh;
+}
+
+#myform {
+    padding: var(--form-grid-gap) var(--margin-left);
+    background-color: antiquewhite;
+}
+
+#myform > p {
+    font-size: var(--introduction-fontsize);
+    padding-bottom: var(--form-grid-gap);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 0.4fr);
+    column-gap: var(--margin-left);
+    row-gap: var(--form-grid-gap);
+}
+
+.about-me-area {
+    grid-column-start: 1;
+    grid-column-end: 3;
 }

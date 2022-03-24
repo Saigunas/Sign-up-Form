@@ -19,7 +19,93 @@
             </div>
         </div>
         <div class="content-box">
-        
+            <p class="introduction">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores laborum maxime ipsum ipsam quia inventore?</p>
+            <p class="introduction2">Lorem ipsum dolor sit amet.</p>
+            <form id="myform">
+                <p>Let's do this!</p>
+                <ul class="grid-container">
+                    <li>
+                        <label for="first-name">*FIRST NAME</label>
+                        <input type="text" id="first-name" name="first-name" required placeholder="Walter">
+                    </li>
+                    <li>
+                        <label for="last-name">*LAST NAME</label>
+                        <input type="text" id="last-name" name="last-name" required placeholder="Clements">
+                    </li>
+                    <li>
+                        <label for="email">*EMAIL</label>
+                        <input type="email" id="email" name="email" required placeholder="user@mydomain.com">
+                    </li>
+                    <li>
+                        <label for="phone">*PHONE NUMBER</label>
+                    <input type="tel" id="phone" name="phone" required pattern="\+370[0-9]{7}" title="+370XXXXXXXX" maxlength="11" placeholder="+370XXXXXXXX">
+                    </li>
+                    <li>
+                        <label for="pass">*PASSWORD</label>
+                        <input type="password" id="pass" required name="pass">
+                    </li>
+                    <li>
+                        <label for="pass-confirm">*CONFIRM PASSWORD</label>
+                        <input type="password" id="pass-confirm" required name="pass-confirm">
+                    </li>
+                    <li>
+                        <label for="birth-date">BIRTH DATE</label>
+                        <input type="date" id="birth-date" name="birth-date" placeholder="">
+                    </li>
+                    <li>
+                        <label for="city">CITY</label>
+                        <select id="city" name="city">
+                            <option>Vilnius</option>
+                            <option>Kaunas</option>
+                            <option>Klaipėda</option>
+                            <option>Šiauliai</option>
+                            <option>Panevėžys</option>
+                            <option>Alytus</option>
+                            <option>Marijampolė</option>
+                            <option>Mažeikiai</option>
+                            <option>Jonava</option>
+                            <option>Utena</option>
+                            <option>Kėdainiai</option>
+                            <option>Tauragė</option>
+                            <option>Telšiai</option>
+                            <option>Ukmergė</option>
+                          </select>
+                    </li>
+                    <li>
+                        <label for="">*GENDER</label>
+                        <label class='gender-text' for="gender-m">Male</label>
+                        <input type="radio" id="gender-m" value="male" name="gender" required>
+                        <label class='gender-text' for="gender-f">Female</label>
+                        <input type="radio" id="gender-f" value="female" name="gender">
+                        <label class='gender-text' for="gender-o">Other</label>
+                        <input type="radio" id="gender-o" value="male" name="gender">
+                    </li>
+                    <li>
+                        <label for="">HOBBIES</label>
+                        <label class='hobby-text' for="hobby1">Sports</label>
+                        <input type="checkbox" id="hobby1" value="cycling" name="hobby1">
+                        <label class='hobby-text' for="hobby2">Music</label>
+                        <input type="checkbox" id="hobby2" value="music" name="hobby2">
+                        <label class='hobby-text' for="hobby3">Video games</label>
+                        <input type="checkbox" id="hobby3" value="video-games" name="hobby3">
+                        <label class='hobby-text' for="hobby4">movies</label>
+                        <input type="checkbox" id="hobby4" value="movies" name="hobby4">
+                    </li>
+                    <li class="about-me-area">
+                        <label for="about-me">ABOUT ME</label>
+                        <textarea id="about-me" name="about-me" maxlength="300" autocomplete=off 
+                            placeholder="I like fire trucks and monster trucks
+                             Walter"></textarea>       
+                    </li>
+                </ul>
+            </form>
+            
+            <button class='sign-up-bttn' form="myform" type="submit">Create Account</button>
+            
+            <div class="haveAccount">
+                <p>Already have an account? </p>
+                <a href="">Log in</a>
+            </div>
         </div>
     </div>
 

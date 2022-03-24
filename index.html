@@ -21,12 +21,15 @@
         <div class="content-box">
             <p class="introduction">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores laborum maxime ipsum ipsam quia inventore?</p>
             <p class="introduction2">Lorem ipsum dolor sit amet.</p>
+            <div class="haveAccount">
+                <p>Already have an account? <a href="">Log in</a></p>   
+            </div>
             <form id="myform">
                 <p>Let's do this!</p>
                 <ul class="grid-container">
                     <li>
                         <label for="first-name">*FIRST NAME</label>
-                        <input type="text" id="first-name" name="first-name" required placeholder="Walter">
+                        <input type="text" id="first-name" name="first-name"  required placeholder="Walter">
                     </li>
                     <li>
                         <label for="last-name">*LAST NAME</label>
@@ -44,13 +47,12 @@
                     </li>
                     <li>
                         <label for="pass">*PASSWORD</label>
-                        <input type="password" id="pass" required name="pass">
+                        <input type="password" id="pass" value="" required name="pass">
                         <p class="requirement">Passwords must match</p>
                     </li>
                     <li>
                         <label for="pass-confirm">*CONFIRM PASSWORD</label>
-                        <input type="password" id="pass-confirm" required name="pass-confirm">
-                        <p class="requirement">Passwords must match</p>
+                        <input type="password" id="pass-confirm" value="" required name="pass-confirm">
                     </li>
                     <li>
                         <label for="birth-date">BIRTH DATE</label>
@@ -112,17 +114,18 @@
                         <textarea id="about-me" name="about-me" maxlength="300" autocomplete=off 
                             placeholder="I like fire trucks and monster trucks"></textarea>       
                     </li>
+                    <li class="button-area">
+                        <button class='sign-up-bttn' form="myform" type="submit">Create Account</button>
+                    </li>
                 </ul>
             </form>
             
-            <button class='sign-up-bttn' form="myform" type="submit">Create Account</button>
             
-            <div class="haveAccount">
-                <p>Already have an account? </p>
-                <a href="">Log in</a>
-            </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
+
 
 </body>
 </html>

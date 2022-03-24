@@ -7,6 +7,8 @@
     --input-fontsize: 1.1rem;
     --form-grid-gap: 30px;
     --input-border: #dddddd;
+    --invalid: pink;
+    --valid:  rgb(228, 243, 212);
 }
 
 body {
@@ -54,20 +56,24 @@ body {
     height: 7rem;
 }
 
-.content-box > p, .sign-up-bttn, .haveAccount {
+.content-box > p, .haveAccount {
     margin-left: var(--margin-left);
     margin-top: 3vh;
 }
 
 .content-box > .introduction {
     font-size: var(--introduction-fontsize);
-    margin-top: 15vh;
+    margin-top: 13vh;
     margin-right: calc(var(--margin-left)*2.5);
+}
+
+.haveAccount {
+    padding-bottom: 0.5em;
 }
 
 .introduction2 {
     font-size: var(--introduction-fontsize);
-    margin-bottom: 5vh;
+    margin-bottom: 8vh;
 }
 
 #myform {
@@ -106,11 +112,6 @@ body {
     row-gap: var(--form-grid-gap);
 }
 
-.about-me-area {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
 #myform input, #myform textarea {
     padding: 0.3em 0.5em;
     background-color: rgb(255, 255, 255);
@@ -118,7 +119,7 @@ body {
     border-radius: 4px;
     font-family: inherit;
     font-size: var(--input-fontsize);
-    /* max-width: 200px; */
+    max-width: 14em;
 }
 
 #myform select{
@@ -128,6 +129,10 @@ body {
     font-size: var(--input-fontsize);
     background-color: #eee;
     border-radius: 5px;
+}
+
+#myform select:hover {
+    cursor: pointer;
 }
 
 #myform textarea {
@@ -154,10 +159,59 @@ body {
     padding: 0.5rem 0 1rem 0;
 }
 
+#myform  input[type="password"].invalid:not(:focus) + .requirement{
+    max-height: 200px;
+    padding: 0.5rem 0 1rem 0;
+}
+
+#myform input[type="password"].invalid:not(:focus){
+    background: var(--invalid);
+}
+
+#myform input[type="password"].valid{
+    background: var(--valid);
+}
+
 #myform input[type="email"]:invalid:not(:focus):not(:placeholder-shown){
-    background: pink;
+    background: var(--invalid);
 }
 
 #myform input[type="tel"]:invalid:not(:focus):not(:placeholder-shown){
-    background: pink;
+    background: var(--invalid);
 }
+
+#myform input:focus{
+    box-shadow: 4px 4px 16px 0px rgba(0,0,0,0.24);
+    -webkit-box-shadow: 4px 4px 16px 0px rgba(0,0,0,0.24);
+    -moz-box-shadow: 4px 4px 16px 0px rgba(0,0,0,0.24);
+}
+
+.button-area {
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+}
+
+.sign-up-bttn {
+    padding: 0.8em 2em;
+    background-color: rgb(129, 255, 171);
+    border: none;
+    border-radius: 0.6rem;
+    font-family: inherit;
+    font-size: var(--input-fontsize);
+    transition: 0.28s;
+    
+}
+
+.sign-up-bttn:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 16px 0px rgba(0,0,0,0.24);
+}
+
+a{
+    font-size: var(--input-fontsize);
+    text-decoration: none;
+    color: aqua;
+}
+
